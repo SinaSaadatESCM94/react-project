@@ -1,0 +1,12 @@
+in this component the defualt assumptions is that all the arrays in array contains same keys, so there is no worry to check this.
+The fact is I believe that this should be checked for consistancy, but anyway for now i skip it.
+hint: I realised thta there is a library called lodash wich can be usefull to check. e.g:
+    // to check if all object in array contains same keys
+	  const hasSameKeys = (arrOfObjects) => {
+		const _ = require("lodash");
+		let isEqual = true;
+		arrOfObjects.forEach((eachObj) => {
+			if (!_.isEqual(arrOfObjects[0], eachObj)) {
+				isEqual = false;
+			}
+		});
