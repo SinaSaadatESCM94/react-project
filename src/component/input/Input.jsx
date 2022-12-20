@@ -102,15 +102,16 @@ function Input ({
 					style={{ backgroundColor: "#adb5bd" }}
 				>
 					<FontAwesomeIcon icon={icon} className="p-3 text-primary" />
+					{/* {icon} */}
 					<input
 						type={type}
 						name={name}
 						id={id}
-						className="bg-transparent w-100"
+						className="bg-transparent w-100 border-0"
 						required={true}
 						// tabIndex={tabIndex}
 						// autoComplete={autoComplete}
-						placeholder="full name"
+						placeholder={placeholder}
 						// disabled={disabled}
 						onChange={changeHandler}
 						onBlur={blurHandler}
