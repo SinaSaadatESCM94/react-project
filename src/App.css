@@ -4,3 +4,6 @@
   box-sizing: border-box;
   outline: none;
 }
+.bg-default-input{
+  background-color: #adb5bd;
+}
