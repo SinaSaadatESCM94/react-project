@@ -4,36 +4,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
 // import { FormattedMessage } from "react-intl";
 
-function Input ({
-	containerClass="",
+function Input({
+	containerClass = "",
 	label,
-	lableMargin= "mb-2",
-	labelFontSize="h5 m-0",
-	labelColor= "text-muted",
-	background="bg-default-input",
-	border= "border border-secondary",
-	borderRadius= "rounded-4",
-	paddingY="py-2",
+	lableMargin = "mb-2",
+	labelFontSize = "h5 m-0",
+	labelColor = "text-muted",
+	background = "bg-default-input",
+	border = "border border-secondary",
+	borderRadius = "rounded-4",
+	paddingY = "py-2",
 	icon,
-	inputIconColor= "text-primary",
-	iconPaddingX= "px-3",
-	fontSize= "h6",
-	inputColor= "text-muted",
+	inputIconColor = "text-primary",
+	iconPaddingX = "px-3",
+	fontSize = "h6",
+	inputColor = "text-muted",
 	placeholder,
-	type= "text",
+	type = "text",
 	id,
 	name,
-	required= true,
-	tabIndex= "",
-	autoComplete= false,
-	disabled= false,
+	required = true,
+	tabIndex = "",
+	autoComplete = false,
+	disabled = false,
 	value,
 	setValue,
-	regEx="",
+	regEx = "",
 	onChange,
 	onBlur,
 	...rest
-}){
+}) {
 	// defualt regEx for validation in case none is imported
 	const fieldInputRegEx = {
 		firstName: /^[a-zA-Zا-ی ]*$/,
@@ -72,7 +72,7 @@ function Input ({
 		});
 	};
 	// to change password icon and show/hide password
-	const [ passIcon, setPassIcon ] = useState(faEyeSlash);
+	const [passIcon, setPassIcon] = useState(faEyeSlash);
 	const showHidePassword = () => {
 		let inputElement = document.querySelector(`input#${id}`);
 		switch (inputElement.type === "password") {
@@ -125,7 +125,12 @@ function Input ({
 						-inputIconColor
 						-iconPaddingX
 					*/}
-					{icon && <FontAwesomeIcon icon={icon} className={`${inputIconColor} ${iconPaddingX}`} />}
+					{icon && (
+						<FontAwesomeIcon
+							icon={icon}
+							className={`${inputIconColor} ${iconPaddingX}`}
+						/>
+					)}
 					{/* main input element of course
 							passed props to this element as class:
 								-iconPaddingX
@@ -136,7 +141,9 @@ function Input ({
 						type={type}
 						name={name}
 						id={id}
-						className={`bg-transparent w-100 border-0 ${icon? "ps-0" : iconPaddingX}`}
+						className={`bg-transparent w-100 border-0 ${
+							icon ? "ps-0" : iconPaddingX
+						}`}
 						required={required}
 						tabIndex={tabIndex}
 						autoComplete={autoComplete}
@@ -144,18 +151,16 @@ function Input ({
 						disabled={disabled}
 						value={value.value}
 						onChange={onChange ? onChange : defaultChangeHandler}
-						onBlur={onBlur ? onBlur: defaultBlurHandler}
+						onBlur={onBlur ? onBlur : defaultBlurHandler}
 					/>
 					{/* the following element is shown only for password type input and this icon works as a button to show and hide input's value
 					passed props to this element as class:
 						-iconPaddingX
 					*/}
-					{type === "password" &&
-					value.value && (
+					{type === "password" && value.value && (
 						<FontAwesomeIcon
 							icon={passIcon}
-							className={`text-dark ${iconPaddingX}`}
-							style={{ cursor: "pointer" }}
+							className={`cursor-pointer text-dark ${iconPaddingX}`}
 							onClick={() => {
 								showHidePassword();
 							}}
@@ -177,7 +182,7 @@ Input.propTypes = {
 	border: PropTypes.string,
 	borderRadius: PropTypes.string,
 	paddingY: PropTypes.string,
-	icon:PropTypes.object,
+	icon: PropTypes.object,
 	inputIconColor: PropTypes.string,
 	iconPaddingX: PropTypes.string,
 	fontSize: PropTypes.string,
@@ -194,19 +199,19 @@ Input.propTypes = {
 	setValue: PropTypes.func,
 	regEx: PropTypes.string,
 	onChange: PropTypes.func,
-	onBlur: PropTypes.func
+	onBlur: PropTypes.func,
 };
-Input.defaultProps={
-	containerClas:"",
-	label:"",
+Input.defaultProps = {
+	containerClas: "",
+	label: "",
 	lableMargin: "mb-2",
-	labelFontSize:"h5 m-0",
+	labelFontSize: "h5 m-0",
 	labelColor: "text-muted",
-	background:"bg-default-input",
+	background: "bg-default-input",
 	border: "border border-secondary",
 	borderRadius: "rounded-4",
-	paddingY:"py-2",
-	icon : null,
+	paddingY: "py-2",
+	icon: null,
 	inputIconColor: "text-primary",
 	iconPaddingX: "px-3",
 	fontSize: "h6",
@@ -221,12 +226,11 @@ Input.defaultProps={
 	disabled: false,
 	value: {},
 	setValue: null,
-	regEx:"",
+	regEx: "",
 	onChange: null,
-	onBlur: null
-}
+	onBlur: null,
+};
 export default Input;
-
 
 // ******************************USAGE******************************
 // <Input
