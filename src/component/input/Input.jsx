@@ -25,7 +25,7 @@ function Input({
 	name,
 	required = true,
 	tabIndex = "",
-	autoComplete = false,
+	autoComplete = "false",
 	disabled = false,
 	value,
 	setValue,
@@ -193,7 +193,7 @@ Input.propTypes = {
 	name: PropTypes.string,
 	required: PropTypes.bool,
 	tabIndex: PropTypes.string,
-	autoComplete: PropTypes.bool,
+	autoComplete: PropTypes.string,
 	disabled: PropTypes.bool,
 	value: PropTypes.object,
 	setValue: PropTypes.func,
@@ -202,7 +202,7 @@ Input.propTypes = {
 	onBlur: PropTypes.func,
 };
 Input.defaultProps = {
-	containerClas: "",
+	containerClass: "",
 	label: "",
 	lableMargin: "mb-2",
 	labelFontSize: "h5 m-0",
@@ -222,7 +222,7 @@ Input.defaultProps = {
 	name: "",
 	required: true,
 	tabIndex: "",
-	autoComplete: false,
+	autoComplete: "false",
 	disabled: false,
 	value: {},
 	setValue: null,
@@ -234,7 +234,7 @@ export default Input;
 
 // ******************************USAGE******************************
 // <Input
-// 	containerClas="" --> class for main parent
+// 	containerClass="" --> class for main parent
 // 	label="email" --> text that is shown as lable
 // 	lableMargin="mb-2" --> class for lable's margin bottom
 // 	labelFontSize="h5 m-0" --> class for lable font size
@@ -254,7 +254,7 @@ export default Input;
 // 	name= "email" --> input name
 // 	required= {true} --> input requirty
 // 	tabIndex= "" --> input tabIndex
-// 	autoComplete= {false} --> input autoComplete
+// 	autoComplete= "false" --> input autoComplete
 // 	disabled= {false} --> input disablity
 // 	value= {email} --> object e.g {value:"",hasError:true,touched:false}
 // 	setValue= {setEmail} --> useState function
