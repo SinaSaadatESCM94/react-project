@@ -7,6 +7,9 @@
 .cursor-pointer {
 	cursor: pointer;
 }
+.transition-all {
+	transition: all ease 0.3s;
+}
 .bg-default-input {
 	background-color: #adb5bd;
 }
