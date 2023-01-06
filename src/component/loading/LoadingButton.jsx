@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 // importing style
-import "./Loading.css";
+import "./Loading.scss";
 
 function LoadingButton({ paddingY, backgroundColor }) {
 	return (
