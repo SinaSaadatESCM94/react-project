@@ -1,0 +1,13 @@
+.menu-icon-bar-height {
+	height: 0.3rem;
+}
+.bars-container.toggle .bar-top {
+	transform: rotate(-45deg) translate(-0.2rem, 0.3rem);
+}
+.bars-container.toggle .bar-middle {
+	transform: translateX(-5px);
+	background: transparent !important;
+}
+.bars-container.toggle .bar-bottom {
+	transform: rotate(45deg) translate(-0.5rem, -0.6rem);
+}
