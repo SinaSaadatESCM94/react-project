@@ -8,6 +8,7 @@ import ApiTest from "../component/apiTest/ApiTest";
 import ContentTable from "../component/ContentTable/ContentTable";
 import Input from "../component/input/Input";
 import Button from "../component/button/Button";
+import MenuIcon from "../component/menu-icon/menuIcon";
 
 export default function TestCreateComponentBarnch() {
 	// states
@@ -16,6 +17,9 @@ export default function TestCreateComponentBarnch() {
 		hasError: true,
 		touched: false,
 	});
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isMenuOpenSecond, setIsMenuOpenSecond] = useState(false);
+	console.log(isMenuOpen);
 	// const [ users, setUsers ] = useState([]);
 	// const url = [
 	// 	"https://reqres.in/api/users?delay=3",
@@ -75,6 +79,13 @@ export default function TestCreateComponentBarnch() {
 					/>
 				</fieldset>
 			</form>
+			<div>
+				<MenuIcon
+					id="button1"
+					isMenuOpen={isMenuOpen}
+					setIsMenuOpen={setIsMenuOpen}
+				/>
+			</div>
 		</main>
 	);
 }
