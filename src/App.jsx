@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./App.scss";
 // importing font awsome
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 // importing svg-components
