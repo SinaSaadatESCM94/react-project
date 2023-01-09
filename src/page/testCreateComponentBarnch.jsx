@@ -9,6 +9,7 @@ import ContentTable from "../component/ContentTable/ContentTable";
 import Input from "../component/input/Input";
 import Button from "../component/button/Button";
 import MenuIcon from "../component/menu-icon/menuIcon";
+import Logo from "../component/logo/Logo";
 
 export default function TestCreateComponentBarnch() {
 	// states
@@ -85,6 +86,9 @@ export default function TestCreateComponentBarnch() {
 					isMenuOpen={isMenuOpen}
 					setIsMenuOpen={setIsMenuOpen}
 				/>
+			</div>
+			<div className="mt-3">
+				<Logo />
 			</div>
 		</main>
 	);
