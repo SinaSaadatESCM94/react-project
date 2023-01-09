@@ -6,6 +6,11 @@
 	box-sizing: border-box;
 	outline: none;
 }
+:root {
+	--primary-purple: #633ebc;
+	--primary-gray: #adb5bd;
+	--primary-gray-light: #f3f5f9;
+}
 .cursor-pointer {
 	cursor: pointer;
 }
@@ -13,5 +18,11 @@
 	transition: all ease 0.3s;
 }
 .bg-default-input {
-	background-color: #adb5bd;
+	background-color: var(--primary-gray);
+}
+.bg-purple {
+	background-color: var(--primary-purple);
+}
+.bg-gray-light {
+	background-color: var(--primary-gray-light);
 }
