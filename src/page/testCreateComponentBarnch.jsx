@@ -39,12 +39,12 @@ export default function TestCreateComponentBarnch() {
 				<fieldset className="w-100 d-flex align-items-center justify-content-center mb-4">
 					<Input
 						label={"email"}
-						labelFontSize="h4"
-						fontSize="h5 m-0"
+						labelFontSize="h6"
+						fontSize="h6 m-0"
 						labelColor="text-muted"
 						background="#adb5bd"
 						border="border border-secondary"
-						borderRadius="rounded-4"
+						borderRadius="rounded-2"
 						icon={faEnvelope}
 						// icon={<MessageIcon size={12} color="red" />}
 						inputIconColor="text-primary"
@@ -68,7 +68,7 @@ export default function TestCreateComponentBarnch() {
 						// className=""
 						// backgroundColor=""
 						// border=""
-						// borderRadius=""
+						borderRadius="rounded-2"
 						// paddingY=""
 						// fontSize=""
 						// disableColor=""

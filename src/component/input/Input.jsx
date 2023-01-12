@@ -103,7 +103,7 @@ function Input({
 							-labelColor
 				*/}
 				<span
-					className={`px-3 text-capitalize ${lableMargin} ${labelFontSize} ${labelColor}`}
+					className={`text-capitalize ${lableMargin} ${labelFontSize} ${labelColor}`}
 				>
 					{label}
 				</span>
