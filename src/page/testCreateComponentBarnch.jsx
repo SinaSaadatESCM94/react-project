@@ -4,12 +4,14 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 // importing svg-components
 import { MessageIcon } from "../content/svg-component";
 // importing components
-import ApiTest from "../component/apiTest/ApiTest";
-import ContentTable from "../component/ContentTable/ContentTable";
-import Input from "../component/input/Input";
-import Button from "../component/button/Button";
-import MenuIcon from "../component/menu-icon/menuIcon";
-import Logo from "../component/logo/Logo";
+import {
+	ApiTest,
+	ContentTable,
+	Input,
+	Button,
+	MenuIcon,
+	Logo,
+} from "../component";
 
 export default function TestCreateComponentBarnch() {
 	// states
@@ -20,7 +22,6 @@ export default function TestCreateComponentBarnch() {
 	});
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isMenuOpenSecond, setIsMenuOpenSecond] = useState(false);
-	console.log(isMenuOpen);
 	// const [ users, setUsers ] = useState([]);
 	// const url = [
 	// 	"https://reqres.in/api/users?delay=3",

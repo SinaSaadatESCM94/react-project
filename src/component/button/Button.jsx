@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 // importing components
-import LoadingButton from "../loading/LoadingButton";
+import { LoadingButton } from "../../component";
 function Button({
 	containerClass,
 	fontSize,
