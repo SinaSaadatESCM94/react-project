@@ -28,3 +28,8 @@ Logo.defaultProps = {
 };
 
 export default Logo;
+
+// ******************************USAGE******************************
+// <Logo
+// 	variant="huge" --> className that declares size of logo
+// />
