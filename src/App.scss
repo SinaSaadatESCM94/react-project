@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 *,
 *::after,
 *::before {
@@ -10,6 +11,10 @@
 	--primary-purple: #633ebc;
 	--primary-gray: #adb5bd;
 	--primary-gray-light: #f3f5f9;
+	--primary-gray-dark: #d3d0df;
+}
+body {
+	font-family: "roboto";
 }
 .cursor-pointer {
 	cursor: pointer;
@@ -25,4 +30,10 @@
 }
 .bg-gray-light {
 	background-color: var(--primary-gray-light);
+}
+.bg-gray-dark {
+	background-color: var(--primary-gray-dark);
+}
+.text-purple {
+	color: var(--primary-purple);
 }
