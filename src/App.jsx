@@ -9,7 +9,7 @@ import TestCreateComponentBarnch from "./page/testCreateComponentBarnch";
 import TestCreatePageBranch from "./page/testCreatePageBranch";
 function App() {
 	return (
-		<div className="App">
+		<div className="App w-100">
 			<main className="w-100 d-flex flex-column align-items-center justify-content-center">
 				{/* <TestCreateComponentBarnch /> */}
 				<TestCreatePageBranch />
