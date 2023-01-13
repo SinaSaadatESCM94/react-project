@@ -36,7 +36,7 @@ function SignUp(props) {
 	// form function
 	const doSubmit = () => {};
 	return (
-		<div className="w-100 min-vh-100 d-flex align-items-center justify-content-center py-2">
+		<div className="w-100 d-flex align-items-center justify-content-center py-2">
 			<main className="col-8 d-flex justify-content-center align-items-stretch rounded shadow my-5">
 				<section className="col-6 d-flex flex-column py-5 px-5 bg-white rounded-start">
 					<header className="w-100 d-flex flex-column">
