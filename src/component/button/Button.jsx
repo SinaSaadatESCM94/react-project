@@ -19,6 +19,7 @@ function Button({
 	form,
 	className,
 	label,
+	tabindex,
 	showLoadingOnClick,
 	onClick,
 }) {
@@ -41,8 +42,7 @@ function Button({
 		// 			- fontSize
 		// 			- containerClass
 		<div
-			className={`w-100 d-flex align-items-center ${fontSize} ${containerClass}`}
-		>
+			className={`w-100 d-flex align-items-center ${fontSize} ${containerClass}`}>
 			{/* main button element of course
 						passed props to this element as class:
 							- backgroundColor
@@ -57,6 +57,7 @@ function Button({
 				type={type}
 				id={id}
 				value={value}
+				tabIndex={tabindex}
 				// there are two conditions that the button is supposed to be disabled:
 				// 		1. when the user has set disabled to true
 				// 		2. when the button is clicked, so the button won't respond to more clickes and with that it is possible to prevent to many request from api
@@ -65,8 +66,7 @@ function Button({
 				className={`w-100 text-center text-capitalize m-0 d-flex align-items-center justify-content-center ${backgroundColor} ${border} ${borderRadius} ${paddingY}  ${
 					disabled ? disableColor : inableColor
 				} ${className}`}
-				onClick={doSubmit}
-			>
+				onClick={doSubmit}>
 				{/* the following is label of the button, is the user wants to use LoadingButton after button is clicked can pass showLoadingOnClock prop as true (which is its defualt value), but in case of false value for this prop label will not change after click.  */}
 				{showLoadingOnClick && isClicked ? <LoadingButton /> : label}
 			</button>
@@ -90,6 +90,7 @@ Button.propTypes = {
 	form: PropTypes.string,
 	className: PropTypes.string,
 	label: PropTypes.string,
+	tabIndex: PropTypes.string,
 	showLoadingOnClick: PropTypes.bool,
 	onClick: PropTypes.func,
 };
@@ -109,6 +110,7 @@ Button.defaultProps = {
 	form: "",
 	className: "",
 	label: "submit",
+	tabIndex: "",
 	showLoadingOnClick: true,
 	onClick: () => {},
 };
@@ -132,6 +134,7 @@ export default Button;
 //		form=""	--> form that this button belongs to
 //		className=""	--> botton className
 //		label="submit"	--> button label
+// 		tabindex="1" --> button tabindex
 //		showLoadingOnClick={true}	--> boolean value, whether using loading or not
 //		onClick={() => {}} --> onClick function
 //	/>;
