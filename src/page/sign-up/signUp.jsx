@@ -37,16 +37,16 @@ function SignUp(props) {
 	const doSubmit = () => {};
 	return (
 		<div className="w-100 d-flex align-items-center justify-content-center py-2">
-			<main className="col-8 d-flex justify-content-center align-items-stretch rounded shadow my-5">
-				<section className="col-6 d-flex flex-column py-5 px-5 bg-white rounded-start">
+			<main className="col-11 col-sm-9 d-flex justify-content-center align-items-stretch bg-white rounded shadow my-5">
+				<section className="col-12 col-md-6 d-flex flex-column py-5 px-2 px-sm-5 px-md-3 px-xl-5 bg-white rounded rounded-md-start">
 					<header className="w-100 d-flex flex-column">
 						<h5 className="text-muted fw-bold">Signup Now</h5>
 					</header>
 					<form>
 						{/* firstname & lastname field */}
-						<fieldset className="d-flex flex-row align-items-center justify-content-between mt-3">
+						<fieldset className="d-flex flex-column flex-lg-row align-items-center justify-content-between mt-3">
 							{/* firstname */}
-							<div className="col-6 d-flex flex-column align-items-center justify-content-center pe-1">
+							<div className="col-12 col-lg-6 d-flex flex-column align-items-center justify-content-center pe-0 pe-lg-1">
 								<Input
 									tabIndex="1"
 									label={"first name"}
@@ -68,7 +68,7 @@ function SignUp(props) {
 								/>
 							</div>
 							{/* lastname */}
-							<div className="col-6 d-flex flex-column align-items-center justify-content-center ps-1">
+							<div className="col-12 col-lg-6 mt-3 mt-lg-0 d-flex flex-column align-items-center justify-content-center ps-0 ps-lg-1">
 								<Input
 									tabIndex="2"
 									label={"last name"}
@@ -160,6 +160,7 @@ function SignUp(props) {
 						<fieldset className="d-flex flex-column align-items-center justify-content-center mt-3">
 							<Button
 								tabIndex="6"
+								fontSize="h6"
 								type="button"
 								id="signup-submit-button"
 								value="button"
@@ -176,7 +177,7 @@ function SignUp(props) {
 						</fieldset>
 					</form>
 				</section>
-				<section className="col-6 d-flex align-items-center justify-content-center">
+				<section className="col-md-6 d-none d-md-flex align-items-center justify-content-center">
 					<Authentication />
 				</section>
 			</main>
