@@ -94,8 +94,7 @@ function Input({
 			*/}
 			<label
 				htmlFor={name}
-				className={`w-100 h-auto d-flex flex-column justify-content-between align-items-start ${containerClass}`}
-			>
+				className={`w-100 h-auto d-flex flex-column justify-content-between align-items-start ${containerClass}`}>
 				{/* following span contains lable of the inpput
 						passed props to this element as class:
 							-labelMargin
@@ -103,8 +102,7 @@ function Input({
 							-labelColor
 				*/}
 				<span
-					className={`text-capitalize ${lableMargin} ${labelFontSize} ${labelColor}`}
-				>
+					className={`text-capitalize ${lableMargin} ${labelFontSize} ${labelColor}`}>
 					{label}
 				</span>
 				{/* following div contains icons and input
@@ -118,8 +116,7 @@ function Input({
 					className={`w-100 d-flex align-items-center justify-conetnt-between ${fontSize} ${inputColor} ${background} ${border} ${borderRadius} ${paddingY}
 					${value.hasError && value.touched ? "border-danger" : ""}
 					${!value.hasError && value.touched ? "border-success" : ""}	
-					m-0`}
-				>
+					m-0`}>
 					{/* the following element is to create icon for input, if nothing is passed as icon nothing will be rendered on DOM
 					passed props to this element as class:
 						-inputIconColor
@@ -150,7 +147,10 @@ function Input({
 						placeholder={placeholder}
 						disabled={disabled}
 						value={value.value}
-						onChange={onChange ? onChange : defaultChangeHandler}
+						onChange={(e) => {
+							onChange(e);
+							defaultChangeHandler(e);
+						}}
 						onBlur={onBlur ? onBlur : defaultBlurHandler}
 					/>
 					{/* the following element is shown only for password type input and this icon works as a button to show and hide input's value
