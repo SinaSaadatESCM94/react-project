@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { setRegExPattern, isValid } from "../../utils/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
 // import { FormattedMessage } from "react-intl";
@@ -34,31 +35,15 @@ function Input({
 	onBlur,
 	...rest
 }) {
-	// defualt regEx for validation in case none is imported
-	const fieldInputRegEx = {
-		firstName: /^[a-zA-Zا-ی ]*$/,
-		lastName: /^[a-zA-Zا-ی ]*$/,
-		fullName: /^[a-zA-Zا-ی ]*$/,
-		email: /^[a-zA-Z0-9_.-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
-		userName: /^[a-zA-Z0-9_./]+.{3,}$/,
-		password: /^(?=.*\d)(?=.*[!@#$%^&*/])(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
-		confirmPassword: /^(?=.*\d)(?=.*[!@#$%^&*/])(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
-	};
 	// functions:
 	// onChange function
 	const defaultChangeHandler = (e) => {
 		// check if any regEx is passed as props for validation, if not defualt regEx will be used
-		let regExPattern;
-		if (regEx) {
-			regExPattern = regEx;
-		} else {
-			regExPattern = fieldInputRegEx[name];
-		}
+		let regExPattern = setRegExPattern(regEx, name);
+
 		// check if value is valid according to specified regEx
-		let hasError = false;
-		if (!regExPattern.test(e.target.value)) {
-			hasError = true;
-		}
+		let hasError = isValid(regExPattern, e.target.value);
+
 		// set value and hasError of value object based on previous results
 		setValue((curentValue) => {
 			return { ...curentValue, value: e.target.value, hasError };
@@ -151,7 +136,10 @@ function Input({
 							onChange(e);
 							defaultChangeHandler(e);
 						}}
-						onBlur={onBlur ? onBlur : defaultBlurHandler}
+						onBlur={(e) => {
+							onBlur(e);
+							defaultBlurHandler(e);
+						}}
 					/>
 					{/* the following element is shown only for password type input and this icon works as a button to show and hide input's value
 					passed props to this element as class:
@@ -227,8 +215,8 @@ Input.defaultProps = {
 	value: {},
 	setValue: null,
 	regEx: "",
-	onChange: null,
-	onBlur: null,
+	onChange: () => {},
+	onBlur: () => {},
 };
 export default Input;
 
