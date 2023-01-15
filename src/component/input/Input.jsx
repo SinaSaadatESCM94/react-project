@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { setRegExPattern, isValid } from "../../utils/index";
+import { setRegExPattern, isValid } from "../../utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
 // import { FormattedMessage } from "react-intl";
