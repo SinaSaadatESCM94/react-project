@@ -42,7 +42,7 @@ function Button({
 		// 			- fontSize
 		// 			- containerClass
 		<div
-			className={`w-100 d-flex align-items-center ${fontSize} ${containerClass}`}>
+			className={`w-100 d-flex align-items-center ${fontSize} ${containerClass} m-0 p-0 form-element-height`}>
 			{/* main button element of course
 						passed props to this element as class:
 							- backgroundColor
@@ -63,7 +63,7 @@ function Button({
 				// 		2. when the button is clicked, so the button won't respond to more clickes and with that it is possible to prevent to many request from api
 				disabled={!disabled ? isClicked : true}
 				form={form}
-				className={`w-100 text-center text-capitalize m-0 d-flex align-items-center justify-content-center ${backgroundColor} ${border} ${borderRadius} ${paddingY}  ${
+				className={`w-100 h-100 text-center text-capitalize m-0 d-flex align-items-center justify-content-center ${backgroundColor} ${border} ${borderRadius} ${paddingY}  ${
 					disabled ? disableColor : inableColor
 				} ${className}`}
 				onClick={doSubmit}>
