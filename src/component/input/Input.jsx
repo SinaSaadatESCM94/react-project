@@ -101,7 +101,7 @@ function Input({
 					className={`w-100 d-flex align-items-center justify-conetnt-between ${fontSize} ${inputColor} ${background} ${border} ${borderRadius} ${paddingY}
 					${value.hasError && value.touched ? "border-danger" : ""}
 					${!value.hasError && value.touched ? "border-success" : ""}	
-					m-0`}>
+					m-0 form-element-height`}>
 					{/* the following element is to create icon for input, if nothing is passed as icon nothing will be rendered on DOM
 					passed props to this element as class:
 						-inputIconColor
