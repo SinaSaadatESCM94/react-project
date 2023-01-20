@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Authentication from "../authentication/authentication";
 import { Input, Button } from "../../component";
@@ -90,6 +91,15 @@ function Login(props) {
 								}}
 								label="login"
 							/>
+						</fieldset>
+						<fieldset className="w-100 d-flex flex-column flex-md-row align-items-center justify-content-center mt-2">
+							<span className="me-2 text-muted">Don't have an account?</span>
+							{/* <span className="text-purple">Sign up</span> */}
+							<Link
+								to="signup"
+								className="text-purple">
+								Sign up
+							</Link>
 						</fieldset>
 					</form>
 				</section>
