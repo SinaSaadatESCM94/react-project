@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import Authentication from "../authentication/authentication";
 import { Input, Button } from "../../component";
-import { faUser, faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 
 function Login(props) {
   const dataArray = ["email", "password"];
@@ -19,8 +19,11 @@ function Login(props) {
   });
   const [formError, setFormError] = useState({});
   const [formData, setFormData] = useState({});
+  const navigate = useNavigate();
   // form function
-  const doSubmit = () => {};
+  const doSubmit = () => {
+    navigate("board");
+  };
   return (
     <div className="w-100 d-flex align-items-center justify-content-center py-5">
       <main className="col-11 col-sm-9 d-flex justify-content-center align-items-stretch bg-white rounded shadow my-5">
