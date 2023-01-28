@@ -80,22 +80,22 @@ function SignUp(props) {
     alert(message);
   };
   return (
-    <div className="w-100 d-flex align-items-center justify-content-center py-2">
+    <div className="w-100 d-flex align-items-center justify-content-center py-5">
       <main className="col-11 col-sm-9 d-flex justify-content-center align-items-stretch bg-white rounded shadow my-5">
-        <section className="col-12 col-md-6 d-flex flex-column py-5 px-2 px-sm-5 px-md-3 px-xl-5 bg-white rounded rounded-md-start">
+        <section className="col-12 col-md-6 d-flex flex-column p-5 bg-white rounded rounded-md-start">
           <header className="w-100 d-flex flex-column">
-            <h5 className="text-muted fw-bold">Signup Now</h5>
+            <h2 className="text-muted fw-bold">Signup Now</h2>
           </header>
           <form>
             {/* firstname & lastname field */}
-            <fieldset className="d-flex flex-column flex-lg-row align-items-center justify-content-between mt-3">
+            <fieldset className="d-flex flex-column flex-lg-row align-items-center justify-content-between mt-4">
               {/* firstname */}
               <div className="col-12 col-lg-6 d-flex flex-column align-items-center justify-content-center pe-0 pe-lg-1">
                 <Input
                   tabIndex="1"
                   label={"first name"}
-                  labelFontSize="h6"
-                  fontSize="h6 m-0"
+                  labelFontSize="h4"
+                  fontSize="h4 m-0"
                   labelColor="text-muted"
                   background="#fff"
                   border="border border-secondary"
@@ -112,12 +112,12 @@ function SignUp(props) {
                 />
               </div>
               {/* lastname */}
-              <div className="col-12 col-lg-6 mt-3 mt-lg-0 d-flex flex-column align-items-center justify-content-center ps-0 ps-lg-1">
+              <div className="col-12 col-lg-6 mt-4 mt-lg-0 d-flex flex-column align-items-center justify-content-center ps-0 ps-lg-1">
                 <Input
                   tabIndex="2"
                   label={"last name"}
-                  labelFontSize="h6"
-                  fontSize="h6 m-0"
+                  labelFontSize="h4"
+                  fontSize="h4 m-0"
                   labelColor="text-muted"
                   background="#fff"
                   border="border border-secondary"
@@ -135,12 +135,12 @@ function SignUp(props) {
               </div>
             </fieldset>
             {/* email */}
-            <fieldset className="d-flex flex-column align-items-center justify-content-center mt-3">
+            <fieldset className="d-flex flex-column align-items-center justify-content-center mt-4">
               <Input
                 tabIndex="3"
                 label={"email"}
-                labelFontSize="h6"
-                fontSize="h6 m-0"
+                labelFontSize="h4"
+                fontSize="h4 m-0"
                 labelColor="text-muted"
                 background="#fff"
                 border="border border-secondary"
@@ -157,12 +157,12 @@ function SignUp(props) {
               />
             </fieldset>
             {/* password */}
-            <fieldset className="d-flex flex-column align-items-center justify-content-center mt-3">
+            <fieldset className="d-flex flex-column align-items-center justify-content-center mt-4">
               <Input
                 tabIndex="4"
                 label={"password"}
-                labelFontSize="h6"
-                fontSize="h6 m-0"
+                labelFontSize="h4"
+                fontSize="h4 m-0"
                 labelColor="text-muted"
                 background="#fff"
                 border="border border-secondary"
@@ -179,12 +179,12 @@ function SignUp(props) {
               />
             </fieldset>
             {/* confirm password */}
-            <fieldset className="d-flex flex-column align-items-center justify-content-center mt-3">
+            <fieldset className="d-flex flex-column align-items-center justify-content-center mt-4">
               <Input
                 tabIndex="5"
                 label={"repeat password"}
-                labelFontSize="h6"
-                fontSize="h6 m-0"
+                labelFontSize="h4"
+                fontSize="h4 m-0"
                 labelColor="text-muted"
                 background="#fff"
                 border="border border-secondary"
@@ -201,10 +201,10 @@ function SignUp(props) {
               />
             </fieldset>
             {/* button */}
-            <fieldset className="d-flex flex-column align-items-center justify-content-center mt-3">
+            <fieldset className="d-flex flex-column align-items-center justify-content-center mt-4">
               <Button
                 tabIndex="6"
-                fontSize="h6"
+                fontSize="h4"
                 type="button"
                 id="signup-submit-button"
                 value="button"
