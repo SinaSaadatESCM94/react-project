@@ -6,5 +6,5 @@ import Input from "./input/Input";
 import LoadingButton from "./loading/LoadingButton";
 import Logo from "./logo/Logo";
 import MenuIcon from "./menu-icon/menuIcon";
-
 export { ApiTest, Button, ContentTable, Input, LoadingButton, Logo, MenuIcon };
+export * from "./specific";
