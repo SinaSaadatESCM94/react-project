@@ -16,10 +16,10 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/SinaSaadatESCM94/react-project.git" element={<Layout />}>
-        <Route index element={<Login />} />
+        <Route index path="" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
-        <Route path="test-component" element={<TestCreateComponentBarnch />} />
         <Route path="board" element={<BoardProject />} />
+        <Route path="test-component" element={<TestCreateComponentBarnch />} />
       </Route>
     </Routes>
   </BrowserRouter>
