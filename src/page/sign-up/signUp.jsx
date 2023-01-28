@@ -219,12 +219,12 @@ function SignUp(props) {
                 label="sign up"
               />
             </fieldset>
-            {/* <fieldset className="w-100 d-flex flex-column flex-md-row align-items-center justify-content-center mt-2">
+            <fieldset className="w-100 d-flex flex-column flex-md-row align-items-center justify-content-center mt-4 h4">
               <span className="me-2 text-muted">Have an account already?</span>
               <Link replace to={""} className="text-purple">
                 login
               </Link>
-            </fieldset> */}
+            </fieldset>
           </form>
         </section>
         <section className="col-md-6 d-none d-md-flex align-items-center justify-content-center">
