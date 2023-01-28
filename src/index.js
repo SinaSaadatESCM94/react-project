@@ -8,30 +8,21 @@ import "bootstrap/dist/css/bootstrap.css";
 import Layout from "./layout/layout";
 import Login from "./page/login/login";
 import SignUp from "./page/sign-up/signUp";
+import BoardProject from "./page/designers-board-project/boardProject";
 import TestCreateComponentBarnch from "./page/testCreateComponentBarnch";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-	<BrowserRouter>
-		<Routes>
-			<Route
-				path="/SinaSaadatESCM94/react-project.git"
-				element={<Layout />}>
-				<Route
-					index
-					element={<Login />}
-				/>
-				<Route
-					path="signup"
-					element={<SignUp />}
-				/>
-				<Route
-					path="test-component"
-					element={<TestCreateComponentBarnch />}
-				/>
-			</Route>
-		</Routes>
-	</BrowserRouter>,
+  <BrowserRouter>
+    <Routes>
+      <Route path="/SinaSaadatESCM94/react-project.git" element={<Layout />}>
+        <Route index element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
+        <Route path="test-component" element={<TestCreateComponentBarnch />} />
+        <Route path="board" element={<BoardProject />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
