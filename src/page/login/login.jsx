@@ -25,7 +25,9 @@ function Login(props) {
   // form function
   const doSubmit = () => {
     isLoading(true);
-    const users = getDataToArray("users");
+    let users;
+    if (!getDataToArray("users")) users = [];
+    else users = getDataToArray("users");
     let isAllowed = false;
     let message = "Oops, there is no registered account with this email!";
     users.map((user) => {
@@ -111,7 +113,7 @@ function Login(props) {
                 id="signup-submit-button"
                 value="button"
                 loading={loading}
-                disabled={loading}
+                disabled={email.hasError || password.hasError || loading}
                 form="form"
                 backgroundColor="bg-purple"
                 borderRadius="rounded-2"
