@@ -236,7 +236,14 @@ function SignUp(props) {
                 id="signup-submit-button"
                 value="button"
                 loading={loading}
-                disabled={loading}
+                disabled={
+                  firstName.hasError ||
+                  lastName.hasError ||
+                  email.hasError ||
+                  password.hasError ||
+                  repeatPassword.hasError ||
+                  loading
+                }
                 form="form"
                 backgroundColor="bg-purple"
                 borderRadius="rounded-2"
