@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Link, useNavigate } from "react-router-dom";
+import { getDataToArray } from "../../utils";
 import Authentication from "../authentication/authentication";
 import { Input, Button } from "../../component";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 
 function Login(props) {
+  const [loading, isLoading] = useState(false);
   const dataArray = ["email", "password"];
   const [email, setEmail] = useState({
     value: "",
@@ -22,7 +24,31 @@ function Login(props) {
   const navigate = useNavigate();
   // form function
   const doSubmit = () => {
-    navigate("board");
+    isLoading(true);
+    const users = getDataToArray("users");
+    let isAllowed = false;
+    let message = "Oops, there is no registered account with this email!";
+    users.map((user) => {
+      switch (email.value === user.email) {
+        case true:
+          if (password.value === user.password) {
+            isAllowed = true;
+            message = "you're loged in successfully.";
+          } else {
+            message = "wrong password";
+            setPassword({ ...password, hasError: true });
+          }
+          break;
+
+        default:
+          break;
+      }
+    });
+    setTimeout(() => {
+      isLoading(false);
+      alert(message);
+      if (isAllowed) navigate("board");
+    }, 1000);
   };
   return (
     <div className="w-100 d-flex align-items-center justify-content-center py-5">
@@ -84,7 +110,8 @@ function Login(props) {
                 type="button"
                 id="signup-submit-button"
                 value="button"
-                disabled={false}
+                loading={loading}
+                disabled={loading}
                 form="form"
                 backgroundColor="bg-purple"
                 borderRadius="rounded-2"
