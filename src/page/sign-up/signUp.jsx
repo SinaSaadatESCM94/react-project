@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { getDataToArray, setDataObject, asyncLocalStorage } from "../../utils";
 
@@ -9,7 +9,8 @@ import { Input, Button } from "../../component";
 import { faUser, faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 
 function SignUp(props) {
-  const dataArray = ["firstName", "lastName", "email", "password"];
+  const initialRout = "/SinaSaadatESCM94/react-project.git";
+  const [loading, isLoading] = useState(false);
   const [firstName, setFirstName] = useState({
     value: "",
     hasError: true,
@@ -35,29 +36,50 @@ function SignUp(props) {
     hasError: true,
     touched: false,
   });
-  // form function
-  const doSubmit = () => {
-    let tempData = {};
+  const navigate = useNavigate();
+  // form functions
+  const formValidation = () => {
     let formError = false;
+    let tempData = {};
     if (!firstName.hasError) tempData.firstName = firstName.value;
-    else formError = true;
+    else {
+      setFirstName({ ...firstName, hasError: true });
+      formError = true;
+    }
     if (!lastName.hasError) tempData.lastName = lastName.value;
-    else formError = true;
+    else {
+      setLastName({ ...lastName, hasError: true });
+      formError = true;
+    }
     if (!email.hasError) tempData.email = email.value;
-    else formError = true;
+    else {
+      setEmail({ ...email, hasError: true });
+      formError = true;
+    }
     if (!password.hasError && password.value === repeatPassword.value)
       tempData.password = password.value;
-    else formError = true;
-    //
+    else {
+      setPassword({ ...password, hasError: true });
+      setRepeatPassword({ ...repeatPassword, hasError: true });
+      formError = true;
+    }
+    return { formError, tempData };
+  };
+  const doSubmit = () => {
+    isLoading(true);
+    let { formError, tempData } = formValidation();
     let message;
+    let isAllowed = false;
+
     if (!formError) {
       let users = [];
+      let isUnique = true;
       if (!getDataToArray("users")) {
         users.push(tempData);
         setDataObject("users", users);
+        isAllowed = true;
         message = "you are signed up successfully";
       } else {
-        let isUnique = true;
         users = getDataToArray("users");
         users.map((eachUser) => {
           switch (eachUser.email === tempData.email) {
@@ -66,18 +88,23 @@ function SignUp(props) {
               isUnique = false;
               break;
             default:
-              message = "you are signe up successfully";
+              message = "you are signed up successfully";
           }
         });
         if (isUnique) {
           users.push(tempData);
           setDataObject("users", users);
+          isAllowed = true;
         }
       }
     } else {
       message = "please fill all required fields properly";
     }
-    alert(message);
+    setTimeout(() => {
+      isLoading(false);
+      alert(message);
+      if (isAllowed) navigate(`${initialRout}/board`);
+    }, 1000);
   };
   return (
     <div className="w-100 d-flex align-items-center justify-content-center py-5">
@@ -208,7 +235,8 @@ function SignUp(props) {
                 type="button"
                 id="signup-submit-button"
                 value="button"
-                disabled={false}
+                loading={loading}
+                disabled={loading}
                 form="form"
                 backgroundColor="bg-purple"
                 borderRadius="rounded-2"
@@ -221,7 +249,7 @@ function SignUp(props) {
             </fieldset>
             <fieldset className="w-100 d-flex flex-column flex-md-row align-items-center justify-content-center mt-4 h4">
               <span className="me-2 text-muted">Have an account already?</span>
-              <Link replace to={""} className="text-purple">
+              <Link replace to={`${initialRout}`} className="text-purple">
                 login
               </Link>
             </fieldset>
