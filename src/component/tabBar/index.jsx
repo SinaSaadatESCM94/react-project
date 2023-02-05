@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Shortcut } from "../../../component";
+import { Shortcut } from "../../component";
 
 const TabBar = ({ className, tabList }) => {
   // console.log();
