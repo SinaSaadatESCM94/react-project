@@ -25,7 +25,7 @@ const Header = ({
 }) => {
   return (
     <div
-      className={`w-auto h-auto d-flex align-items-center justify-content-between text-color-primary-light Header-container ${className}`}
+      className={`w-auto h-auto d-flex align-items-center justify-content-between text-color-primary-light shadow Header-container ${className}`}
     >
       <div className="w-auto h-auto d-flex me-5 align-items-center header-start">
         <div className={`w-4rem me-3`}>

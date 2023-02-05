@@ -17,7 +17,6 @@ import ktmLogo from "../../assets/icons/KTM.png";
 // Components
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  Header,
   SideBar,
   CardContainer,
   TabBar,
@@ -125,9 +124,8 @@ function BoardProject() {
     },
   ];
   return (
-    <div className="w-auto h-auto d-flex flex-column rounded-4 designersBoardProject-page page">
-      <Header />
-      <main className="w-100 h-auto shadow d-flex rounded-4 overflow-hidden bg-board">
+    <div className="w-auto h-auto d-flex flex-column">
+      <main className="w-100 h-auto shadow d-flex overflow-hidden bg-board">
         <SideBar logo={ktmLogo} />
         <div className="w-100 h-auto d-flex flex-column py-3 px-4 board-sections-container">
           <section className="w-100 h-auto d-flex flex-column gap-1 mb-2 board-header">

@@ -107,7 +107,7 @@ function SignUp(props) {
     }, 1000);
   };
   return (
-    <div className="w-100 d-flex align-items-center justify-content-center py-5">
+    <div className="w-100 d-flex align-items-center justify-content-center pt-3">
       <main className="col-11 col-sm-9 d-flex justify-content-center align-items-stretch bg-white rounded shadow my-5">
         <section className="col-12 col-md-6 d-flex flex-column p-5 bg-white rounded rounded-md-start">
           <header className="w-100 d-flex flex-column">
