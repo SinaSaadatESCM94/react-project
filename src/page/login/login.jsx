@@ -115,7 +115,7 @@ function Login(props) {
                 loading={loading}
                 disabled={email.hasError || password.hasError || loading}
                 form="form"
-                backgroundColor="bg-purple"
+                backgroundColor="btn-purple"
                 borderRadius="rounded-2"
                 showLoadingOnClick={true}
                 onClick={() => {
