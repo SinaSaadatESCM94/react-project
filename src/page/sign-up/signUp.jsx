@@ -245,7 +245,7 @@ function SignUp(props) {
                   loading
                 }
                 form="form"
-                backgroundColor="bg-purple"
+                backgroundColor="btn-purple"
                 borderRadius="rounded-2"
                 showLoadingOnClick={true}
                 onClick={() => {
