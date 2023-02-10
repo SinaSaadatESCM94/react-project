@@ -1,0 +1,31 @@
+$colors: (#633ebc, #1d4440);
+$colors-name: ("purple", "primary-dark");
+
+@mixin render-btn {
+  @for $m from 1 through 2 {
+    .btn-#{nth($colors-name, $m)} {
+      background: nth($colors, $m);
+      &:hover {
+        background: darken(nth($colors, $m), 10%);
+      }
+      &:active {
+        background: darken(nth($colors, $m), 15%);
+        box-shadow: none;
+      }
+      &:focus {
+        background: darken(nth($colors, $m), 12%);
+      }
+      &:disabled {
+        opacity: 0.5;
+        background: nth($colors, $m);
+        cursor: not-allowed;
+      }
+      &[disabled] {
+        opacity: 0.5;
+        background: nth($colors, $m);
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+@include render-btn();
