@@ -1,0 +1,8 @@
+ul {
+  .slide-container {
+    width: calc(100% / 7);
+    &:hover {
+      width: calc(100% * (5 / 12));
+    }
+  }
+}
