@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Shortcut } from "../../component";
 
 const TabBar = ({ className, tabList }) => {
-  // console.log();
   return (
     <ul
       className={`w-auto h-auto d-flex align-items-center m-0 p-0 tabs-container`}
@@ -15,12 +15,19 @@ const TabBar = ({ className, tabList }) => {
             key={eachTabItem.key}
             className={`list-unstyled w-auto d-flex flex-row align-items-center justify-content-between px-3 py-2 me-3 rounded-4 cursor-pointer transition-all ${className}`}
           >
-            <Shortcut
-              className={`h4 mb-0`}
-              onClick="null"
-              icon={eachTabItem.icon}
-              label={eachTabItem.label}
-            />
+            <Link
+              to={`/SinaSaadatESCM94/react-project.git/${
+                eachTabItem.link || "not-found"
+              }`}
+              className="w-100 d-flex align-items-center text-reset text-decoration-none"
+            >
+              <Shortcut
+                className={`h4 mb-0`}
+                onClick="null"
+                icon={eachTabItem.icon}
+                label={eachTabItem.label}
+              />
+            </Link>
           </li>
         );
       })}
