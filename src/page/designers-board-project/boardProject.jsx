@@ -25,6 +25,7 @@ import {
   Shortcut,
   Calender,
   DrivePoster,
+  Header,
 } from "../../component";
 function BoardProject() {
   // tabList array is created to hold the values for each tab.
@@ -125,6 +126,7 @@ function BoardProject() {
   ];
   return (
     <div className="w-auto h-auto d-flex flex-column">
+      <Header />
       <main className="w-100 h-auto shadow d-flex overflow-hidden bg-board">
         <SideBar logo={ktmLogo} />
         <div className="w-100 h-auto d-flex flex-column py-3 px-4 board-sections-container">
