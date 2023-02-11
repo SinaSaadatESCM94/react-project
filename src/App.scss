@@ -47,6 +47,7 @@
   --secondary-lighter: #eae8ff;
   --bg-badge: #ff6d2e;
   --input-lable: #343434;
+  --bg-dark: #101313;
 }
 html {
   font-size: 62.5%;
@@ -71,6 +72,9 @@ body {
 }
 .bg-gray-dark {
   background-color: var(--primary-gray-dark);
+}
+.bg-dark {
+  background-color: var(--bg-dark);
 }
 .text-purple {
   color: var(--primary-purple);
@@ -206,4 +210,13 @@ body {
   .drivePoster-container {
     overflow-x: scroll;
   }
+}
+.fs-huge {
+  font-size: calc(5rem + 10vw) !important;
+}
+.rounded-end-3 {
+  border-radius: 0rem 1rem 1rem 0rem !important;
+}
+.rounded-start-3 {
+  border-radius: 1rem 0rem 0rem 1rem !important;
 }
