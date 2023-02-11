@@ -100,12 +100,17 @@ const Header = ({
 Header.defaultProps = {
   logo: "",
   tabList: [
-    { icon: faDashboard, label: "dashboard", key: "dashboard" },
-    { icon: faFolderOpen, label: "projects", key: "projects" },
-    { icon: faSheetPlastic, label: "invoices", key: "invoices" },
+    { icon: faDashboard, label: "dashboard", key: "dashboard", link: "board" },
+    {
+      icon: faSheetPlastic,
+      label: "slide show",
+      key: "slideShow",
+      link: "slide-show",
+    },
     { icon: faCalendar, label: "calender", key: "calender" },
     { icon: faListCheck, label: "todo", key: "todo" },
     { icon: faHardDrive, label: "drive", key: "drive" },
+    { icon: faFolderOpen, label: "projects", key: "projects" },
   ],
   notificationNumbers: "2",
   profileImage: defualtProfilePic,
