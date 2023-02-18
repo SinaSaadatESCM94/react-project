@@ -17,6 +17,8 @@ import Note from "./note";
 import Shortcut from "./shortcut";
 import SideBar from "./sideBar";
 import TabBar from "./tabBar";
+import CalcButton from "./calculator-button";
+import CalcMonitor from "./calculator-monitor";
 export {
   ApiTest,
   Button,
@@ -36,4 +38,6 @@ export {
   Shortcut,
   SideBar,
   TabBar,
+  CalcButton,
+  CalcMonitor,
 };
