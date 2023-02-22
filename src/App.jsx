@@ -3,13 +3,16 @@ import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Layout from "./layout/layout";
-import Login from "./page/login/login";
-import SignUp from "./page/sign-up/signUp";
-import BoardProject from "./page/designers-board-project/boardProject";
-import NotFound from "./page/not-found";
-import SlideShow from "./page/slide-show";
-import Calculator from "./page/calculator";
-import TestCreateComponentBarnch from "./page/testCreateComponentBarnch";
+import {
+  Login,
+  SignUp,
+  BoardProject,
+  NotFound,
+  SlideShow,
+  Calculator,
+  TestCreateComponentBarnch,
+  McuSlides,
+} from "../src/page";
 function App() {
   return (
     <div className="App w-100">
@@ -29,6 +32,7 @@ function App() {
               path="test-component"
               element={<TestCreateComponentBarnch />}
             />
+            <Route path="marvel-cinematic-universe" element={<McuSlides />} />
           </Route>
         </Routes>
       </BrowserRouter>
