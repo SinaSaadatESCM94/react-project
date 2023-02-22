@@ -1,0 +1,17 @@
+$colors: (#555555, #ff9300);
+$text: (#adb5bd, #ffffff);
+$colors-name: ("one", "two");
+
+@mixin render-btn-type {
+  @for $m from 1 through 2 {
+    .calcBtn-type-#{nth($colors-name, $m)} {
+      background: nth($colors, $m);
+      color: nth($text, $m);
+      box-shadow: inset 0px 0px 5px 0px #000000;
+      &:hover {
+        background: darken(nth($colors, $m), 10%);
+      }
+    }
+  }
+}
+@include render-btn-type();
