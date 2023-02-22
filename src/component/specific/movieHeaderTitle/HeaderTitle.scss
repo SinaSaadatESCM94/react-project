@@ -1,0 +1,58 @@
+// colors
+// :root {
+// 	--body-bg: #23252c;
+// 	--card-bg: #f5f5f5;
+// 	--text-header1: #2b283a;
+// 	--text-header2: #f47d27;
+// 	--text-content: #4a4e74;
+// 	--footer-bg: #d5d4d8;
+// 	--footer-text: #918e9b;
+// 	--email-bg: #ffffff;
+// 	--email-txt: #374151;
+// 	--email-icon: #1e1f26;
+// 	--linkedin-bg: #297fe5;
+// 	--linkedin-txt: #ffffff;
+// 	--linkedin-icon: #ffffff;
+// 	--pad-h: 10%;
+// 	--pad-v: 25%;
+// 	--border-rad: 10px;
+// }
+// @media (prefers-color-scheme: dark) {
+// 	:root {
+// 		--body-bg: #23252c;
+// 		--card-bg: #1a1b21;
+// 		--text-header1: #f5f5f5;
+// 		--text-header2: #f3bf99;
+// 		--text-content: #dcdcdc;
+// 		--footer-bg: #161619;
+// 		--footer-text: #918e9b;
+// 		--email-bg: #ffffff;
+// 		--email-txt: #374151;
+// 		--email-icon: #1e1f26;
+// 		--linkedin-bg: #297fe5;
+// 		--linkedin-txt: #ffffff;
+// 		--linkedin-icon: #ffffff;
+// 		--pad-h: 10%;
+// 		--pad-v: 25%;
+// 	}
+// }
+
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   transition: all 0.5s ease;
+// }
+
+header {
+  height: 7vh;
+  background-color: var(--footer-bg);
+  z-index: 100;
+  opacity: 0.9;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--footer-text);
+  }
+}
