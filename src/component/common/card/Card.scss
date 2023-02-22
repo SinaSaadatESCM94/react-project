@@ -1,0 +1,16 @@
+.card {
+	.task {
+		.primary {
+			color: var(--category-text-primary);
+			background: var(--category-bg-primary);
+		}
+		.secondary {
+			color: var(--category-text-secondary);
+			background: var(--category-bg-secondary);
+		}
+		.tertiary {
+			color: var(--category-text-tertiary);
+			background: var(--category-bg-tertiary);
+		}
+	}
+}
