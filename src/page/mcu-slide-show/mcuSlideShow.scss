@@ -1,0 +1,119 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto&display=swap");
+/* Colors */
+// :root {
+//   --body-bg: #23252c;
+//   --card-bg: #f5f5f5;
+//   --text-header1: #2b283a;
+//   --text-header2: #f47d27;
+//   --text-content: #4a4e74;
+//   --footer-bg: #d5d4d8;
+//   --footer-text: #918e9b;
+//   --email-bg: #ffffff;
+//   --email-txt: #374151;
+//   --email-icon: #1e1f26;
+//   --linkedin-bg: #297fe5;
+//   --linkedin-txt: #ffffff;
+//   --linkedin-icon: #ffffff;
+//   --pad-h: 30px;
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --body-bg: #23252c;
+//     --card-bg: #1a1b21;
+//     --text-header1: #f5f5f5;
+//     --text-header2: #f3bf99;
+//     --text-content: #dcdcdc;
+//     --footer-bg: #161619;
+//     --footer-text: #918e9b;
+//     --email-bg: #ffffff;
+//     --email-txt: #374151;
+//     --email-icon: #1e1f26;
+//     --linkedin-bg: #297fe5;
+//     --linkedin-txt: #ffffff;
+//     --linkedin-icon: #ffffff;
+//     --pad-h: 30px;
+//   }
+// }
+
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   transition: all 0.5s ease;
+// }
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Inter;
+  letter-spacing: 1px;
+  background-color: var(--body-bg);
+}
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#root .McuSlides {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#root .McuSlides .cardContainer {
+  position: relative;
+  width: 100%;
+  padding: 50px 50px 10px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-around;
+  perspective: 1000px;
+}
+#root .McuSlides .cardContainer .holder {
+  position: relative;
+  border-radius: 10px;
+}
+#root .McuSlides .cardContainer .left {
+  top: 20px;
+  transform-style: preserve-3d;
+  transform: rotateY(20deg);
+  box-shadow: -10px -10px 20px -5px var(--footer-bg);
+  opacity: 0.6;
+}
+#root .McuSlides .cardContainer .right {
+  top: 20px;
+  transform-style: preserve-3d;
+  transform: rotateY(-20deg);
+  box-shadow: 10px -10px 20px -5px var(--footer-bg);
+  opacity: 0.6;
+}
+#root .McuSlides .cardContainer .middle {
+  box-shadow: 0px -10px 20px -5px var(--footer-bg);
+}
+
+.btn-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  margin-top: 20px;
+
+  .icon {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--footer-text);
+    transition: all 0.1s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--email-bg);
+    }
+  }
+}
