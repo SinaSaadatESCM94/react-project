@@ -9,6 +9,7 @@ import BoardProject from "./page/designers-board-project/boardProject";
 import NotFound from "./page/not-found";
 import SlideShow from "./page/slide-show";
 import Calculator from "./page/calculator";
+import Presentation from "./page/presentation";
 import TestCreateComponentBarnch from "./page/testCreateComponentBarnch";
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="not-found" element={<NotFound />} />
             <Route path="slide-show" element={<SlideShow />} />
             <Route path="calculator" element={<Calculator />} />
+            <Route path="presentation" element={<Presentation />} />
             <Route
               path="test-component"
               element={<TestCreateComponentBarnch />}
