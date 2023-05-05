@@ -19,6 +19,8 @@ import SideBar from "./sideBar";
 import TabBar from "./tabBar";
 import CalcButton from "./calculator-button";
 import CalcMonitor from "./calculator-monitor";
+import Message from "./message";
+import HookTest from "./hookTest";
 export {
   ApiTest,
   Button,
@@ -40,4 +42,6 @@ export {
   TabBar,
   CalcButton,
   CalcMonitor,
+  Message,
+  HookTest,
 };
