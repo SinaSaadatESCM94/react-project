@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDashboard,
-  faFolderOpen,
   faSheetPlastic,
   faCalendar,
   faListCheck,
@@ -11,6 +10,7 @@ import {
   faEnvelope,
   faTable,
   faSearch,
+  faFilePowerpoint,
 } from "@fortawesome/free-solid-svg-icons";
 import { TabBar, Shortcut } from "../../component";
 import defualtProfilePic from "../../assets/avatars/profile.svg";
@@ -113,9 +113,14 @@ Header.defaultProps = {
       key: "calculator",
       link: "calculator",
     },
+    {
+      icon: faFilePowerpoint,
+      label: "presentation",
+      key: "presentation",
+      link: "presentation",
+    },
     { icon: faCalendar, label: "calender", key: "calender" },
     { icon: faListCheck, label: "todo", key: "todo" },
-    { icon: faFolderOpen, label: "projects", key: "projects" },
   ],
   notificationNumbers: "2",
   profileImage: defualtProfilePic,
