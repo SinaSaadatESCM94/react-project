@@ -21,6 +21,7 @@ import CalcButton from "./calculator-button";
 import CalcMonitor from "./calculator-monitor";
 import Message from "./message";
 import HookTest from "./hookTest";
+import Clock from "./clock";
 export {
   ApiTest,
   Button,
@@ -44,4 +45,5 @@ export {
   CalcMonitor,
   Message,
   HookTest,
+  Clock,
 };
