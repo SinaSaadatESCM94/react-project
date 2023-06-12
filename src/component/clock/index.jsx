@@ -1,6 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./clock.scss";
+import TimeDropDown from "./timeDropDown";
+
+let minutesArr = [];
+for (let i = 0; i < 60; i++) {
+  minutesArr.push({ id: i });
+}
+let hoursArr = [];
+for (let i = 0; i <= 12; i++) {
+  hoursArr.push({ id: i });
+}
 export default function Clock({ clockRadius = "16rem", clockStatus = "hour" }) {
   const pairedNumber = [
     {
@@ -41,37 +51,42 @@ export default function Clock({ clockRadius = "16rem", clockStatus = "hour" }) {
     },
   ];
   return (
-    <div
-      className="rounded-circle d-flex flex-column align-items-center justify-content-between position-relative clock-container"
-      style={{
-        width: `${clockRadius}`,
-        height: `${clockRadius}`,
-      }}
-    >
-      {pairedNumber.map((number, index) => {
-        const { bottomNum, topNum, rotate, rotateRev } = number;
-        return (
-          <div
-            key={index}
-            className="h-100 col-1 p-0 d-flex flex-column align-items-center justify-content-between position-absolute"
-            style={{ transform: `${rotate}` }}
-          >
-            <span
-              className="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle num-size"
-              style={{ transform: `${rotateRev}` }}
+    <main className="w-100 d-flex flex-column align-items-center justify-content-center border border-danger">
+      <section className="col-4 d-flex align-items-center justify-content-between">
+        <TimeDropDown data={hoursArr} show="id" />
+      </section>
+      <section
+        className="rounded-circle d-none flex-column align-items-center justify-content-between position-relative clock-container"
+        style={{
+          width: `${clockRadius}`,
+          height: `${clockRadius}`,
+        }}
+      >
+        {pairedNumber.map((number, index) => {
+          const { bottomNum, topNum, rotate, rotateRev } = number;
+          return (
+            <div
+              key={index}
+              className="h-100 col-1 p-0 d-flex flex-column align-items-center justify-content-between position-absolute"
+              style={{ transform: `${rotate}` }}
             >
-              {topNum[clockStatus]}
-            </span>
-            <span
-              className="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle num-size"
-              style={{ transform: `${rotateRev}` }}
-            >
-              {bottomNum[clockStatus]}
-            </span>
-          </div>
-        );
-      })}
-    </div>
+              <span
+                className="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle num-size"
+                style={{ transform: `${rotateRev}` }}
+              >
+                {topNum[clockStatus]}
+              </span>
+              <span
+                className="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle num-size"
+                style={{ transform: `${rotateRev}` }}
+              >
+                {bottomNum[clockStatus]}
+              </span>
+            </div>
+          );
+        })}
+      </section>
+    </main>
   );
 }
 Clock.propTypes = {
