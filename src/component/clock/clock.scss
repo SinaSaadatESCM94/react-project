@@ -1,7 +1,29 @@
-.h-clock {
-  height: calc(16rem / 12) !important;
-}
 .num-size {
   width: 2rem !important;
   height: 2rem !important;
+}
+.input-number-arrow-none {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+.h-timeDropDown-element {
+  height: 2rem !important;
+}
+.timeDropDown-list {
+  top: 2rem !important;
+}
+.option {
+  background-color: #fff;
+  &:hover {
+    background-color: #f2f2f2 !important;
+  }
+}
+.list-open-true {
+  height: 6rem !important;
+}
+.list-open-false {
+  height: 0rem !important;
 }
